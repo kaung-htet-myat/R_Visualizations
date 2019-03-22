@@ -37,11 +37,12 @@ ggplot(mpg) +
 ggplot(mpg) +
   geom_point(aes(x=drv, y=cyl))
 
-# Correlation between engine power and class of car
+# Correlation between engine power and highway miles per gallon
 # classified by number of cylinders. Plotted this to see the trend and outliers in the trend
 ggplot(mpg) +
   geom_point(aes(x=displ,y=hwy,color=class,shape=as.factor(cyl)))
-
+ggplot(mpg) +
+  geom_point(aes(x=displ,y=hwy,color=class,shape=as.factor(cyl)), position="jitter")
 
 # Correlation between engine power and highway miles per gallon
 # classified by class of the car, number of cylinders and drive type.

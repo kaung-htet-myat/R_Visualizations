@@ -69,3 +69,10 @@ ggplot(mpg, aes(x=displ,y=hwy,color=drv)) +
   #geom_smooth(data=filter(mpg,drv=='r'),se=FALSE) 
   #geom_smooth(data=filter(mpg,drv==4),se=FALSE) +
   #geom_smooth(data=filter(mpg,drv=='f'),se=FALSE) 
+
+
+ggplot(mpg, aes(x=cty, y=hwy)) +
+  geom_point() +
+  geom_abline() +
+  coord_fixed()
+  

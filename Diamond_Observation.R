@@ -32,7 +32,8 @@ table(diamonds$clarity)
 ggplot(data=diamonds) +
   geom_bar(aes(clarity, fill=clarity))
 ggplot(data=diamonds) +
-  geom_bar(aes(clarity, fill=cut))
+  geom_bar(aes(clarity, fill=cut)) +
+  coord_polar()
 ggplot(data=diamonds) +
   geom_bar(aes(clarity, fill=cut), alpha=1/5, position="identity")
 ggplot(data=diamonds) +
@@ -41,6 +42,15 @@ ggplot(data=diamonds) +
   geom_bar(aes(clarity, fill=cut), position="dodge")
 
 
+# Generating polar bar graph of cut feature
+ggplot(data=diamonds) +
+  geom_bar(aes(cut ,fill=cut, width=1, show.legend=FALSE)) +
+  theme(aspect.ratio = 1) +
+  labs(x=NULL, y=NULL) +
+  coord_flip() +
+  coord_polar()
+  
+  
 par(mfrow=c(1,1))
 hist(diamonds$price, col="steelblue")
 
@@ -61,4 +71,3 @@ ggplot(data=diamonds, aes(x=carat,y=price)) +
   geom_point(aes(color=clarity))
 
 # Observation after three plots: There are not much high cut, well-colored and nice clarity diamonds in the group of over 3 to 4 carats
-

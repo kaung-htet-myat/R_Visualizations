@@ -1,0 +1,20 @@
+Seven Parameters of ggplot:
+  1. Data
+  2. Geom
+  3. Mapping
+  4. Stat
+  5. Position Adjustment
+  6. Coordinate
+  7. Faceting
+
+################################################################
+
+Using dplyr:
+  1. filter()
+  2. arrange()
+  3. select()
+  4. rename()
+  5. mutate()
+  6. summarise()
+  7. group_by()
+  8. pipe - %>%
